@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/main/resources/static/estilo.css">
+    <link th:rel="stylesheet" th:href="@{estilo.css}">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="containerIcono"> 
+        <img src="/src/main/resources/static/OpeSimple.png" th:src ="@{OpeSimple.png}" alt="LOGO" class="icono">
+    </div>
+    <div class="containerCalculadora">
+        <div class="boxArmazon">
+            <div class="pantalla">
+                <input class="panInput" type="text" id="pantalla" disabled>
+            </div>
+            <div class="teclas">
+                <div class="lineaT">
+                    <span class="teclados">7</span>
+                    <span class="teclados">8</span>
+                    <span class="teclados">9</span>
+                    <span class="operacion" data-operacion="*" id="multiplicar">×</span>
+                </div>
+                <div class="lineaT">
+                    <span class="teclados">4</span>
+                    <span class="teclados">5</span>
+                    <span class="teclados">6</span>
+                    <span class="operacion" data-operacion="-" id="resta">−</span>
+                </div>
+                <div class="lineaT">
+                    <span class="teclados">1</span>
+                    <span class="teclados">2</span>
+                    <span class="teclados">3</span>
+                    <span class="operacion" data-operacion="+" id="suma">+</span>
+                </div>
+                <div class="lineaT">
+                    <span class="teclados">0</span>
+                    <span class="operacion" data-operacion="/" id="division">/</span>
+                    <span class="resultado">=</span>
+                </div>
+                <div>
+                    <span class="borrar"  id="botonBorrar"><img src="/src/main/resources/static/borrar.png" th:src="@{borrar.png}"  alt="" class="imgBorrar" id="botonBorrar" ></span>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    
+
+    <!-- Asegúrate de que el script se carga correctamente -->
+    <script th:src="@{app.js}"></script>
+</body>
